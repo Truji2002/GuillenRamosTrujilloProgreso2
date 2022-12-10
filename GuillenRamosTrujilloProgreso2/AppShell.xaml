@@ -8,7 +8,11 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        ContentTemplate="{DataTemplate local:Viaje}"
         Route="MainPage" />
+    <!--<ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:Viaje}"
+        Route="MainPage" />-->
 
 </Shell>
