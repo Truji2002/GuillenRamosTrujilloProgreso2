@@ -4,6 +4,7 @@
              x:Class="GuillenRamosTrujilloProgreso2.Viaje"
              Title="Viaje">
     <VerticalStackLayout>
+        
         <Label 
             Text="Viajes"
             VerticalOptions="Center" 
