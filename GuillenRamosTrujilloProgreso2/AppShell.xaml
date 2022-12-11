@@ -5,18 +5,50 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:GuillenRamosTrujilloProgreso2"
     xmlns:views="clr-namespace:GuillenRamosTrujilloProgreso2.Views">
+    <!--Shell.FlyoutBehavior="Flyout">-->
+
 
     
+
+    <!--<FlyoutItem Title="Inicio">
+        <ShellContent
+        ContentTemplate="{DataTemplate local:BeginPage}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Viajes">
+        <ShellContent
+        ContentTemplate="{DataTemplate views:AllViajes}"/>
+    </FlyoutItem>-->
     
-    <ShellContent
-        Title="Home"
+    <!--<ShellContent
+        Title="Main Page"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />-->
+    
+    <TabBar>
+        <Tab Title="Inicio">
+            <ShellContent ContentTemplate="{DataTemplate local:BeginPage}" />
+        </Tab>
+        <Tab Title="Main Page">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+        <!--<Tab Title="Viajes">
+            <ShellContent ContentTemplate="{DataTemplate views:AllViajes}" />
+        </Tab>-->
+    </TabBar>
+
+    <!--<ShellContent
+        Title="Main Page"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
-    
-    
+
+    <ShellContent
+        Title="Inicio"
+        ContentTemplate="{DataTemplate local:BeginPage}" />
+
     <ShellContent
             Title="Viajes"
-            ContentTemplate="{DataTemplate views:AllViajes}"/>
+            ContentTemplate="{DataTemplate views:AllViajes}"/>-->
 
 
 </Shell>

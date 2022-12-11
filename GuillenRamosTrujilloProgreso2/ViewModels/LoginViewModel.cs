@@ -55,7 +55,7 @@ namespace GuillenRamosTrujilloProgreso2.ViewModels
                 var content = await auth.GetFreshAuthAsync();
                 var serializedContent = JsonConvert.SerializeObject(content);
                 Preferences.Set("FreshFirebaseToken", serializedContent);
-                await this._navigation.PushAsync(new BeginPage());
+                await this._navigation.PushAsync(new Views.AllViajes());
             }
             catch (Exception ex)
             {
