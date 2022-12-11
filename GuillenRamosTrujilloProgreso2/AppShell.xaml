@@ -26,17 +26,21 @@
         Route="MainPage" />-->
     
     <TabBar>
-        <Tab Title="Bienvenida" Icon="about">
-            <ShellContent ContentTemplate="{DataTemplate local:BeginPage}" />
+        <Tab Title="Bienvenida" >
+            <ShellContent ContentTemplate="{DataTemplate local:BeginPage}"
+                          Icon="about.png"/>
         </Tab>
-        <Tab Title="Login" Icon="login">
-            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        <Tab Title="Login" >
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" 
+                          Icon="login.png"/>
         </Tab>
-        <Tab Title="Viajes" Icon="viaje">
-            <ShellContent ContentTemplate="{DataTemplate views:ViajesSL}" />
+        <Tab Title="Viajes" >
+            <ShellContent ContentTemplate="{DataTemplate views:ViajesSL}"
+                          Icon="viaje.png"/>
         </Tab>
-        <Tab Title="Mapa" Icon="mapa">
-            <ShellContent ContentTemplate="{DataTemplate views:Mapa}" />
+        <Tab Title="Mapa" >
+            <ShellContent ContentTemplate="{DataTemplate views:Mapa}" 
+                          Icon="mapa.png"/>
         </Tab>
         <!--<Tab Title="Viajes">
             <ShellContent ContentTemplate="{DataTemplate views:AllViajes}" />
