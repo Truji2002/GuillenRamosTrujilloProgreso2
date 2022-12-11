@@ -32,6 +32,9 @@
         <Tab Title="Main Page">
             <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
         </Tab>
+        <Tab Title="Mapa">
+            <ShellContent ContentTemplate="{DataTemplate views:Mapa}" />
+        </Tab>
         <!--<Tab Title="Viajes">
             <ShellContent ContentTemplate="{DataTemplate views:AllViajes}" />
         </Tab>-->
