@@ -12,8 +12,10 @@
 
             <skia:SKLottieView
                 Source="dotnet_bot.png"
+                RepeatCount="-1"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"
+                WidthRequest="200"
                 HorizontalOptions="Center" />
 
             <Label
