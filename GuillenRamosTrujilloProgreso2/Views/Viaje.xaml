@@ -17,27 +17,32 @@
         <Editor x:Name="NombrePais"
                 Placeholder="Ingrese el nombre del país"
                 Text="{Binding Pais}"
-                HeightRequest="70" />
+                HeightRequest="70" 
+                WidthRequest="70"/>
         
         <Editor x:Name="NombreCiudad"
                 Placeholder="Ingrese el nombre de la ciudad"
                 Text="{Binding Ciudad}"
-                HeightRequest="70" />
+                HeightRequest="70" 
+                WidthRequest="70"/>
         
         <Editor x:Name="NombreLugar"
                 Placeholder="Ingrese el nombre del lugar visitado"
                 Text="{Binding NombreLugar}"
-                HeightRequest="70" />
+                HeightRequest="70"
+                WidthRequest="70"/>
 
         <Editor x:Name="TextEditor"
                 Placeholder="Ingrese la reseña del lugar"
                 Text="{Binding Resenia}"
-                HeightRequest="100" />
+                HeightRequest="100" 
+                WidthRequest="70"/>
             
         <Editor x:Name="TextEditor1"
                 
                 Text="{Binding Info}"
-                HeightRequest="100" />
+                HeightRequest="100"
+                WidthRequest="70"/>
 
             <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
             <Button Text="Guardar"

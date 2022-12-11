@@ -13,7 +13,7 @@
     
     
     <ShellContent
-            Title="Notes"
+            Title="Viajes"
             ContentTemplate="{DataTemplate views:AllViajes}"/>
 
 
