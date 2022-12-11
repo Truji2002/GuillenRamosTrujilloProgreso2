@@ -6,6 +6,8 @@
     xmlns:local="clr-namespace:GuillenRamosTrujilloProgreso2"
     xmlns:views="clr-namespace:GuillenRamosTrujilloProgreso2.Views">
 
+    
+    
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"

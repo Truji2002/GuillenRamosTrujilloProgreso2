@@ -50,6 +50,7 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\imagen.png" />
+	  <None Remove="Resources\Raw\dotnetbot.json" />
 	</ItemGroup>
 
 	<ItemGroup>
