@@ -9,11 +9,12 @@
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Icon="home.png"/>
     
     
     <ShellContent
             Title="Viajes"
+            Icon="viaje.png"
             ContentTemplate="{DataTemplate views:AllViajes}"/>
 
 
