@@ -23,10 +23,10 @@
                         TextColor="White"/>
                 <Image
                     Margin="0,30"
-                    Aspect="AspectFit"
-                    HeightRequest="250"
-                    Source="transporte.png"
-                    WidthRequest="250" />
+                    Aspect="Fill"
+                    HeightRequest="230"
+                    Source="imagen.png"
+                    WidthRequest="556" />
             </StackLayout>
 
             <Frame
