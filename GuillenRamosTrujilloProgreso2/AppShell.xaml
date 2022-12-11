@@ -26,16 +26,16 @@
         Route="MainPage" />-->
     
     <TabBar>
-        <Tab Title="Bienvenida">
+        <Tab Title="Bienvenida" Icon="about">
             <ShellContent ContentTemplate="{DataTemplate local:BeginPage}" />
         </Tab>
-        <Tab Title="Login">
+        <Tab Title="Login" Icon="login">
             <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
         </Tab>
-        <Tab Title="Viajes">
+        <Tab Title="Viajes" Icon="viaje">
             <ShellContent ContentTemplate="{DataTemplate views:ViajesSL}" />
         </Tab>
-        <Tab Title="Mapa">
+        <Tab Title="Mapa" Icon="mapa">
             <ShellContent ContentTemplate="{DataTemplate views:Mapa}" />
         </Tab>
         <!--<Tab Title="Viajes">
