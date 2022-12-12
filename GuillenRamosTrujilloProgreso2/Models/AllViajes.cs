@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -33,15 +34,24 @@ namespace GuillenRamosTrujilloProgreso2.Models
                                         {
                                             Filename = filename,
                                             Info = File.ReadAllText(filename),
-                                            Date = File.GetCreationTime(filename)
+                                            Date = File.GetCreationTime(filename),
+                                            
+                                            
                                         })
 
                                         // With the final collection of notes, order them by date
                                         .OrderBy(viaje => viaje.Date);
 
             // Add each note into the ObservableCollection
+            
+            var userInfo = JsonConvert.DeserializeObject<Firebase.Auth.FirebaseAuth>(Preferences.Get("FreshFirebaseToken", ""));
+            MainPage m=new MainPage();
             foreach (Viaje viaje in viajes)
-                Viajes.Add(viaje);
+                if (viaje.UserName.Equals(m.GetEmail()))
+                    Viajes.Add(viaje);
+                
+                //Viajes.Add(viaje);
         }
+        
     }
 }

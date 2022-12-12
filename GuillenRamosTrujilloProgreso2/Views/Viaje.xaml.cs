@@ -1,3 +1,5 @@
+using GuillenRamosTrujilloProgreso2.ViewModels;
+using Newtonsoft.Json;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace GuillenRamosTrujilloProgreso2.Views;
@@ -29,10 +31,11 @@ public partial class Viaje : ContentPage
 
         //string resenia = NombrePais.Text + "\n" + NombreCiudad.Text + "\n" + NombreLugar.Text + "\n" + TextEditor.Text;
         //File.WriteAllText(_fileName, resenia);
-
+        Models.Viaje v= new Models.Viaje();
+        var userInfo = JsonConvert.DeserializeObject<Firebase.Auth.FirebaseAuth>(Preferences.Get("FreshFirebaseToken", ""));
         if (BindingContext is Models.Viaje viaje)
             File.WriteAllText(viaje.Filename, NombrePais.Text + "\n" + NombreCiudad.Text + "\n" + NombreLugar.Text + "\n" + TextEditor.Text);
-
+            v.setUserName(userInfo.User.Email.ToString());
         await Shell.Current.GoToAsync("..");
 
     }
@@ -69,8 +72,10 @@ public partial class Viaje : ContentPage
             
             viajeModel.Date = File.GetCreationTime(fileName);
             viajeModel.Info = File.ReadAllText(fileName);
+            
         }
 
         BindingContext = viajeModel;
     }
+    
 }

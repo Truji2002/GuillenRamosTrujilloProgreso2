@@ -65,13 +65,14 @@
                         HorizontalOptions="CenterAndExpand"
                         Text="Iniciar sesion en la cuenta"
                         TextColor="#1C375C" />
-                    <Entry
+                    <Entry x:Name="Email"
                         Grid.Row="2"
                         Margin="0,20,0,0"
                         HorizontalOptions="FillAndExpand"
                         Placeholder="Email"
                          Keyboard="Email"
                         Text="{Binding UserName}"
+                       
                         VerticalOptions="FillAndExpand" />
                     <Entry
                         Grid.Row="3"

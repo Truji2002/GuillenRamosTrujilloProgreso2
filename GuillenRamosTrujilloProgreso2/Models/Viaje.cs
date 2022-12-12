@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GuillenRamosTrujilloProgreso2.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,5 +23,13 @@ namespace GuillenRamosTrujilloProgreso2.Models
         public string Info { get; set; }
 
         public DateTime Date { get; set; }
+
+        public LoginViewModel UserName { get; set; }
+
+        public void setUserName(string username)
+        {
+            string aux = UserName.ToString();
+            aux =username;  
+        }
     }
 }
