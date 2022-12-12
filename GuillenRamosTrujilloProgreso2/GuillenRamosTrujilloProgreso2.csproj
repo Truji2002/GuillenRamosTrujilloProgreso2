@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0-android;net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
-		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net6.0-windows10.0.19041.0</TargetFrameworks>
+		<TargetFrameworks>net7.0-android;net7.0-ios;net7.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net7.0-windows10.0.19041.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
 		<OutputType>Exe</OutputType>
@@ -46,6 +46,70 @@
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\email.png" />
+	  <None Remove="Resources\Images\google.png" />
+	  <None Remove="Resources\Images\home.png" />
+	  <None Remove="Resources\Images\icon.png" />
+	  <None Remove="Resources\Images\imagen.png" />
+	  <None Remove="Resources\Images\map.png" />
+	  <None Remove="Resources\Images\mapas.ico" />
+	  <None Remove="Resources\Images\mapas1.ico" />
+	  <None Remove="Resources\Images\password.png" />
+	  <None Remove="Resources\Images\travel.png" />
+	  <None Remove="Resources\Images\user.png" />
+	  <None Remove="Resources\Raw\dotnetbot.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="FirebaseAuthentication.net" Version="3.7.2" />
+	  <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="7.0.49" />
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+	  <PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0-preview.61" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="BeginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Dashboard.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="MainPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="NewPage1.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="RegisterPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\AllViajes.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Mapa.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Viaje.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\ViajesSL.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-ios'">
+	  <PackageReference Include="ZXing.Net.Maui.Jgdev">
+	    <Version>1.0.5</Version>
+	  </PackageReference>
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0-maccatalyst'">
+	  <PackageReference Include="ZXing.Net.Maui.Jgdev">
+	    <Version>1.0.5</Version>
+	  </PackageReference>
 	</ItemGroup>
 
 </Project>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuillenRamosTrujilloProgreso2.Views.Viaje"
+             Title="Viaje">
+
+    <ScrollView>
+        <VerticalStackLayout>
+           
+
+        <Label 
+                Text="Reseñas de viajes realizados"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                FontSize="25"/>
+
+        <Editor x:Name="NombrePais"
+                Placeholder="Ingrese el nombre del país"
+                Text="{Binding Pais}"
+                HeightRequest="70" 
+                />
+        
+        <Editor x:Name="NombreCiudad"
+                Placeholder="Ingrese el nombre de la ciudad"
+                Text="{Binding Ciudad}"
+                HeightRequest="70" 
+                />
+        
+        <Editor x:Name="NombreLugar"
+                Placeholder="Ingrese el nombre del lugar visitado"
+                Text="{Binding NombreLugar}"
+                HeightRequest="70"
+                />
+
+        <Editor x:Name="TextEditor"
+                Placeholder="Ingrese la reseña del lugar"
+                Text="{Binding Resenia}"
+                HeightRequest="100" 
+                />
+            
+        <Editor x:Name="TextEditor1"
+                
+                Text="{Binding Info}"
+                HeightRequest="100"
+                />
+
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
+            <Button Text="Guardar"
+                    Clicked="SaveButton_Clicked" />
+
+            <Button Grid.Column="1"
+                    Text="Eliminar"
+                    Clicked="DeleteButton_Clicked" />
+        </Grid>
+
+    
+    </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

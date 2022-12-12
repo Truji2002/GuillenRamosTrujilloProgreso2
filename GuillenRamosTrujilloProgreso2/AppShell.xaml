@@ -4,11 +4,64 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:GuillenRamosTrujilloProgreso2"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:views="clr-namespace:GuillenRamosTrujilloProgreso2.Views">
+    <!--Shell.FlyoutBehavior="Flyout">-->
 
-    <ShellContent
-        Title="Home"
+
+    
+
+    <!--<FlyoutItem Title="Inicio">
+        <ShellContent
+        ContentTemplate="{DataTemplate local:BeginPage}"/>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Viajes">
+        <ShellContent
+        ContentTemplate="{DataTemplate views:AllViajes}"/>
+    </FlyoutItem>-->
+    
+    <!--<ShellContent
+        Title="Main Page"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />-->
+    
+    <TabBar>
+        <Tab Title="Bienvenida"
+             Icon="home.png">
+            <ShellContent ContentTemplate="{DataTemplate local:BeginPage}" />
+        </Tab>
+        <Tab Title="Login"
+             Icon="icon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" 
+                          />
+        </Tab>
+        <Tab Title="Viajes"
+             Icon="travel.png">
+            <ShellContent ContentTemplate="{DataTemplate views:ViajesSL}"
+                          />
+        </Tab>
+        <Tab Title="Mapa"
+             Icon="google.png">
+            <ShellContent ContentTemplate="{DataTemplate views:Mapa}" 
+                          />
+        </Tab>
+        <!--<Tab Title="Viajes">
+            <ShellContent ContentTemplate="{DataTemplate views:AllViajes}" />
+        </Tab>-->
+    </TabBar>
+
+    <!--<ShellContent
+        Title="Main Page"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+
+    <ShellContent
+        Title="Inicio"
+        ContentTemplate="{DataTemplate local:BeginPage}" />
+
+    <ShellContent
+            Title="Viajes"
+            ContentTemplate="{DataTemplate views:AllViajes}"/>-->
+
 
 </Shell>
