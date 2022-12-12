@@ -33,7 +33,7 @@ public partial class Mapa : ContentPage
     {
         double latitud = Double.Parse(Latitude.Text);
         double longitud = Double.Parse(Longitude.Text);
-        string direccion = Address.Text;
+        
 
         Pin boardwalkPin = new Pin
         {
