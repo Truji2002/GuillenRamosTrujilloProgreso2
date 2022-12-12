@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GuillenRamosTrujilloProgreso2.RegisterPage"
+             xmlns:handless="clr-namespace:GuillenRamosTrujilloProgreso2.Handlers"
              NavigationPage.HasNavigationBar="False">
 
     <!--<Grid
@@ -45,19 +46,53 @@
             FontAttributes="Bold"
             FontSize="24"
             HorizontalOptions="CenterAndExpand"
-            Text="Registration"
+            
             TextColor="#1C375C" />
-        <Label
+        <!--<Label
             Grid.Row="1"
             Margin="0,-15,0,0"
             HorizontalOptions="CenterAndExpand"
             Text="Register With Email"
+            TextColor="#1C375C" />-->
+
+        <VerticalStackLayout Spacing="25">
+            <Label Grid.Row="1"
+            Margin="0,-15,0,0"
+            HorizontalOptions="CenterAndExpand"
+            FontSize="22"
+            Text="Registrarse con Email"
             TextColor="#1C375C" />
-        <Entry
+            
+            <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+            <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                <Image VerticalOptions="Center" Source="email.png" HeightRequest="25" WidthRequest="25" />
+                <handless:BorderlessEntry VerticalOptions="Center" Placeholder="Email" Keyboard="Email" Text="{Binding Email}" Grid.Column="1" />
+            </Grid>
+        </Frame>
+
+        <Frame Padding="10" BorderColor="Transparent" CornerRadius="0">
+            <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                <Image VerticalOptions="Center" Source="password.png" HeightRequest="25" WidthRequest="25" />
+                    <handless:BorderlessEntry VerticalOptions="Center" IsPassword="True" Placeholder="Password" Text="{Binding Password}" Grid.Column="1" />
+            </Grid>
+        </Frame>
+
+            <Button
+            Grid.Row="4"
+            BackgroundColor="#1C375C"
+            Command="{Binding RegisterUser}"
+            CornerRadius="20"
+            Text="Register"
+            VerticalOptions="Center"/>
+            
+        </VerticalStackLayout>
+
+        <!--<Entry
             Grid.Row="2"
             Margin="0,20,0,0"
             HorizontalOptions="FillAndExpand"
             Placeholder="Email"
+            
             Keyboard="Email"
             Text="{Binding Email}"
             VerticalOptions="FillAndExpand" />
@@ -73,7 +108,7 @@
             BackgroundColor="#1C375C"
             Command="{Binding RegisterUser}"
             CornerRadius="20"
-            Text="Register" />
+            Text="Register" />-->
     </Grid>
     <!--</Frame>
     </Grid>-->

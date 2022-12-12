@@ -49,7 +49,17 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\email.png" />
+	  <None Remove="Resources\Images\google.png" />
+	  <None Remove="Resources\Images\home.png" />
+	  <None Remove="Resources\Images\icon.png" />
 	  <None Remove="Resources\Images\imagen.png" />
+	  <None Remove="Resources\Images\map.png" />
+	  <None Remove="Resources\Images\mapas.ico" />
+	  <None Remove="Resources\Images\mapas1.ico" />
+	  <None Remove="Resources\Images\password.png" />
+	  <None Remove="Resources\Images\travel.png" />
+	  <None Remove="Resources\Images\user.png" />
 	  <None Remove="Resources\Raw\dotnetbot.json" />
 	</ItemGroup>
 
