@@ -21,6 +21,20 @@
                     </x:Arguments>
                 </MapSpan>
             </x:Arguments>
+            <maps:Map.Pins>
+                <maps:Pin
+                          Address="The city with a boardwalk"
+                          Type="Place">
+                    <maps:Pin.Location>
+                        <sensors:Location>
+                            <x:Arguments>
+                                <x:Double>36.9628066</x:Double>
+                                <x:Double>-122.0194722</x:Double>
+                            </x:Arguments>
+                        </sensors:Location>
+                    </maps:Pin.Location>
+                </maps:Pin>
+            </maps:Map.Pins>
         </maps:Map>
         <StackLayout Orientation="Horizontal"
                      HorizontalOptions="Center"
@@ -32,5 +46,17 @@
             <Button Text="Hybrid"
                     Clicked="OnButtonClicked" />
         </StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center"
+                     Spacing="30">
+            <Entry x:Name="Latitude"
+                Placeholder="Ingrese la latitud" 
+                />
+            <Entry x:Name="Longitude"
+                Placeholder="Ingrese la longitud"
+                />
+        </StackLayout>
+        <Button Text="Agregar pin"
+                Clicked="AgregarPin" />
     </StackLayout>
 </ContentPage>
