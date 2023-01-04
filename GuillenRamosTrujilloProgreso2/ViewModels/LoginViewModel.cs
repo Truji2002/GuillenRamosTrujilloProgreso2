@@ -59,7 +59,7 @@ namespace GuillenRamosTrujilloProgreso2.ViewModels
             }
             catch (Exception ex)
             {
-                await App.Current.MainPage.DisplayAlert("Contraseña incorrecta", ex.Message, "OK");
+                await App.Current.MainPage.DisplayAlert("Contraseña incorrecta", "", "OK");
             }
 
 
