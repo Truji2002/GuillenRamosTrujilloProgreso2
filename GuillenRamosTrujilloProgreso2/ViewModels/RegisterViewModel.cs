@@ -67,8 +67,7 @@ namespace GuillenRamosTrujilloProgreso2.ViewModels
             }
             catch (Exception ex)
             {
-                await App.Current.MainPage.DisplayAlert("Alert", ex.Message, "OK");
-                throw;
+                await App.Current.MainPage.DisplayAlert("Contraseña debil", ex.Message, "OK");
             }
         }
     }
