@@ -4,7 +4,8 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:GuillenRamosTrujilloProgreso2"
-    xmlns:views="clr-namespace:GuillenRamosTrujilloProgreso2.Views">
+    xmlns:views="clr-namespace:GuillenRamosTrujilloProgreso2.Views"
+    NavigationPage.HasBackButton="False">
     <!--Shell.FlyoutBehavior="Flyout">-->
 
 
@@ -24,17 +25,18 @@
         Title="Main Page"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />-->
-    
+
+
     <TabBar>
         <Tab Title="Bienvenida"
              Icon="home.png">
             <ShellContent ContentTemplate="{DataTemplate local:BeginPage}" />
         </Tab>
-        <Tab Title="Login"
+        <!--<Tab Title="Login"
              Icon="icon.png">
             <ShellContent ContentTemplate="{DataTemplate local:MainPage}" 
                           />
-        </Tab>
+        </Tab>-->
         <Tab Title="Viajes"
              Icon="travel.png">
             <ShellContent ContentTemplate="{DataTemplate views:ViajesSL}"
