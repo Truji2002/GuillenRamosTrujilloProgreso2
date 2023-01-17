@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="GuillenRamosTrujilloProgreso2.Views.ViajesItemPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Viajes">
+    <ContentPage.Content>
+        <StackLayout
+            Margin="20"
+            Spacing="4"
+            VerticalOptions="StartAndExpand">
+
+            <Label Text="Ingrese el nombre del país:" />
+            <Entry Text="{Binding Pais}" />
+
+            <Label Text="Ingrese el nombre de la ciudad:" />
+            <Entry Text="{Binding Ciudad}" />
+
+            <Label Text="Ingrese el nombre del lugar visitado:" />
+            <Entry Text="{Binding NombreLugar}" />
+
+            <Label Text="Ingrese la reseña del lugar:" />
+            <Entry Text="{Binding Resenia}" />
+
+            <Label Text="Ingrese la información del lugar:" />
+            <Entry Text="{Binding Info}" />
+
+            <Label Text="Ingrese la fecha en la que visito el lugar:" />
+            <Entry Text="{Binding Date}" />
+
+            <StackLayout Orientation="Horizontal">
+                <Label
+                    Margin="0,10"
+                    HorizontalOptions="StartAndExpand"
+                    Text="¿El lugar fue de su agrado?" />
+                <Switch HorizontalOptions="EndAndExpand" IsToggled="{Binding Servicio}" />
+            </StackLayout>
+
+            <Button Clicked="OnSaveClicked" Text="Guardar" />
+
+            <Button Clicked="OnDeleteClicked" Text="Borrar" />
+
+            <Button Clicked="OnCancelClicked" Text="Cancelar" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

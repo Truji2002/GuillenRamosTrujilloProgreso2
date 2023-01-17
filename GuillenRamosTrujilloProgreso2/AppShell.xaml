@@ -38,7 +38,7 @@
         </Tab>-->
         <Tab Title="Viajes"
              Icon="travel.png">
-            <ShellContent ContentTemplate="{DataTemplate views:ViajesSL}"
+            <ShellContent ContentTemplate="{DataTemplate views:ViajesListPage}"
                           />
         </Tab>
         <Tab Title="Mapa"
