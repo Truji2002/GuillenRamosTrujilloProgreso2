@@ -11,7 +11,7 @@
             VerticalOptions="Center">
 
             <skia:SKLottieView
-                Source="dotnetbot.json"
+                Source="57545-plane.json"
                 RepeatCount="-1"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"

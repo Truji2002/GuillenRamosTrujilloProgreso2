@@ -61,6 +61,8 @@
 	  <None Remove="Resources\Images\password.png" />
 	  <None Remove="Resources\Images\travel.png" />
 	  <None Remove="Resources\Images\user.png" />
+	  <None Remove="Resources\Raw\57545-plane.json" />
+	  <None Remove="Resources\Raw\92893-man-waiting-car.json" />
 	  <None Remove="Resources\Raw\dotnetbot.json" />
 	</ItemGroup>
 
