@@ -16,16 +16,7 @@ namespace GuillenRamosTrujilloProgreso2.Views
         {
             var viajesItem = (ViajesCRUD)BindingContext;
             VIajesDatabase database = await VIajesDatabase.Instance;
-            async void UploadImage_Clicked(object sender, EventArgs e)
-            {
-                var img = await uploadImage.OpenMediaPickerAsync();
-
-                var imagefile = await uploadImage.Upload(img);
-
-                Image_Upload.Source = ImageSource.FromStream(() =>
-                    uploadImage.ByteArrayToStream(uploadImage.StringToByteBase64(imagefile.byteBase64))
-                );
-            }
+            
             await database.SaveItemAsync(viajesItem);
 
             await Navigation.PopAsync();
