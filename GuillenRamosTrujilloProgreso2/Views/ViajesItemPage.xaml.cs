@@ -18,6 +18,7 @@ namespace GuillenRamosTrujilloProgreso2.Views
             VIajesDatabase database = await VIajesDatabase.Instance;
             await database.SaveItemAsync(viajesItem);
             await Navigation.PopAsync();
+
         }
 
         async void OnDeleteClicked(object sender, EventArgs e)
@@ -34,3 +35,4 @@ namespace GuillenRamosTrujilloProgreso2.Views
         }
     }
 }
+

@@ -21,5 +21,6 @@ namespace GuillenRamosTrujilloProgreso2.Models
         public DateTime Date { get; set; }
 
         public bool Servicio { get; set; }
+
     }
 }
