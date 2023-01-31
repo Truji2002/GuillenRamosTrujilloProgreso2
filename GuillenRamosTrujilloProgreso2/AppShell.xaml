@@ -26,8 +26,8 @@
         Route="MainPage" />-->
 
 
-    <TabBar>
-        <Tab Title="Bienvenida"
+    <TabBar NavigationPage.HasNavigationBar="False" NavigationPage.BackButtonTitle="False">
+        <Tab Title="Bienvenida" 
              Icon="home.png">
             <ShellContent ContentTemplate="{DataTemplate local:BeginPage}" />
         </Tab>
