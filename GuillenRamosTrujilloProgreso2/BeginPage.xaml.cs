@@ -6,4 +6,9 @@ public partial class BeginPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private async void Cerrar(object sender, EventArgs e)
+    {
+		await Navigation.PushAsync(new MainPage());
+    }
 }
