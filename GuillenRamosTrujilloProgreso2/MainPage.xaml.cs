@@ -8,6 +8,9 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 		BindingContext = new LoginViewModel(Navigation);
-	}
+        Routing.RegisterRoute(nameof(BeginPage), typeof(BeginPage));
+    }
+
+    
 }
 
