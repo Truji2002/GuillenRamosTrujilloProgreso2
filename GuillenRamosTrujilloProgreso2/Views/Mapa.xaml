@@ -58,10 +58,10 @@
                 />
         </StackLayout>
         <Entry x:Name="Label"
-                Placeholder="Ingrese la latitud" 
+                Placeholder="Ingrese el nombre del lugar" 
                 />
         <Entry x:Name="Address"
-                Placeholder="Ingrese la longitud"
+                Placeholder="Ingrese la dirección"
                 />
         <Button Text="Agregar pin"
                 Clicked="AgregarPin" />
