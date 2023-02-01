@@ -55,11 +55,11 @@ namespace GuillenRamosTrujilloProgreso2.ViewModels
                 var content = await auth.GetFreshAuthAsync();
                 var serializedContent = JsonConvert.SerializeObject(content);
                 Preferences.Set("FreshFirebaseToken", serializedContent);
-                await this._navigation.PushAsync(new Views.AllViajes());
+                await this._navigation.PushAsync(new AppShell());
             }
             catch (Exception ex)
             {
-                await App.Current.MainPage.DisplayAlert("Contraseña incorrecta", " " , "OK");
+                await App.Current.MainPage.DisplayAlert("Usuario/contraseña invalida", " " , "OK");
             }
 
 

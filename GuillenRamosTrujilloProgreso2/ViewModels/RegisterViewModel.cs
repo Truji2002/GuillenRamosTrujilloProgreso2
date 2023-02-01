@@ -62,12 +62,12 @@ namespace GuillenRamosTrujilloProgreso2.ViewModels
                 var auth = await authProvider.CreateUserWithEmailAndPasswordAsync(Email, Password);
                 string token = auth.FirebaseToken;
                 if (token != null)
-                    await App.Current.MainPage.DisplayAlert("Alert", "User Registered successfully", "OK");
+                    await App.Current.MainPage.DisplayAlert("Alerta", "Ha sido registrado exitosamente dentro del sistema", "OK");
                 await this._navigation.PopAsync();
             }
             catch (Exception ex)
             {
-                await App.Current.MainPage.DisplayAlert("Contraseña debil", " " , "OK");
+                await App.Current.MainPage.DisplayAlert("Correo invalido/Contraseña debil", " " , "OK");
             }
         }
     }

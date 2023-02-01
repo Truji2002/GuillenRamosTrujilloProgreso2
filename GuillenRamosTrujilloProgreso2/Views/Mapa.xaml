@@ -4,7 +4,8 @@
              x:Class="GuillenRamosTrujilloProgreso2.Views.Mapa"
              Title="Mapa"
              xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
-             xmlns:sensors="clr-namespace:Microsoft.Maui.Devices.Sensors;assembly=Microsoft.Maui.Essentials">
+             xmlns:sensors="clr-namespace:Microsoft.Maui.Devices.Sensors;assembly=Microsoft.Maui.Essentials"
+             NavigationPage.HasNavigationBar="False">
     <StackLayout Margin="10">
         <maps:Map x:Name="map">
             <x:Arguments>

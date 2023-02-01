@@ -24,20 +24,21 @@
         Title="Main Page"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />-->
-    
-    <TabBar>
-        <Tab Title="Bienvenida"
+
+
+    <TabBar NavigationPage.HasNavigationBar="False" NavigationPage.BackButtonTitle="False">
+        <Tab Title="Bienvenida" 
              Icon="home.png">
             <ShellContent ContentTemplate="{DataTemplate local:BeginPage}" />
         </Tab>
-        <Tab Title="Login"
+        <!--<Tab Title="Login"
              Icon="icon.png">
             <ShellContent ContentTemplate="{DataTemplate local:MainPage}" 
                           />
-        </Tab>
+        </Tab>-->
         <Tab Title="Viajes"
              Icon="travel.png">
-            <ShellContent ContentTemplate="{DataTemplate views:ViajesSL}"
+            <ShellContent ContentTemplate="{DataTemplate views:ViajesListPage}"
                           />
         </Tab>
         <Tab Title="Mapa"

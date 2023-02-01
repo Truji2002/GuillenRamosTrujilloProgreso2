@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:skia="clr-namespace:SkiaSharp.Extended.UI.Controls;assembly=SkiaSharp.Extended.UI"
-             x:Class="GuillenRamosTrujilloProgreso2.BeginPage">
+             x:Class="GuillenRamosTrujilloProgreso2.BeginPage"
+             NavigationPage.HasNavigationBar="False">
     
     <ScrollView>
         <VerticalStackLayout
@@ -11,7 +12,7 @@
             VerticalOptions="Center">
 
             <skia:SKLottieView
-                Source="dotnetbot.json"
+                Source="57545-plane.json"
                 RepeatCount="-1"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"

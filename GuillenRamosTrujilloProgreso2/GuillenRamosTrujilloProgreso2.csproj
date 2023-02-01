@@ -49,6 +49,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\check.png" />
 	  <None Remove="Resources\Images\email.png" />
 	  <None Remove="Resources\Images\google.png" />
 	  <None Remove="Resources\Images\home.png" />
@@ -60,6 +61,8 @@
 	  <None Remove="Resources\Images\password.png" />
 	  <None Remove="Resources\Images\travel.png" />
 	  <None Remove="Resources\Images\user.png" />
+	  <None Remove="Resources\Raw\57545-plane.json" />
+	  <None Remove="Resources\Raw\92893-man-waiting-car.json" />
 	  <None Remove="Resources\Raw\dotnetbot.json" />
 	</ItemGroup>
 
@@ -68,6 +71,21 @@
 	  <PackageReference Include="Microsoft.Maui.Controls.Maps" Version="7.0.49" />
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
 	  <PackageReference Include="SkiaSharp.Extended.UI.Maui" Version="2.0.0-preview.61" />
+	  <PackageReference Include="sqlite-net-pcl" Version="1.9.141-beta" />
+	  <PackageReference Include="SQLiteNetExtensions.Async" Version="2.1.0" />
+	  <PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.4" />
+	  <PackageReference Include="SQLitePCLRaw.core" Version="2.1.4" />
+	  <PackageReference Include="SQLitePCLRaw.provider.dynamic_cdecl" Version="2.1.4" />
+	  <PackageReference Include="SQLitePCLRaw.provider.sqlite3" Version="2.1.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Views\ViajesListPage.xaml.cs">
+	    <DependentUpon>ViajesListPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\ViajesItemPage.xaml.cs">
+	    <DependentUpon>ViajesItemPage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -87,6 +105,12 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\AllViajes.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\ViajesItemPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\ViajesListPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Mapa.xaml">
