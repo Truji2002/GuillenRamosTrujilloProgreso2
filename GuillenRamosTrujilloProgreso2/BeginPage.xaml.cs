@@ -9,6 +9,7 @@ public partial class BeginPage : ContentPage
 
     public async void CerrarSesión(object sender, EventArgs e)
     {
-        await BeginPage.Current.GoToAsync(new MainPage());
+        await NavigationService.NavigateAsync("PageName");
     }
+    
 }
