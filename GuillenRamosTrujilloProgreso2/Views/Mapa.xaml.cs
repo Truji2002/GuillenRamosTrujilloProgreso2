@@ -28,6 +28,8 @@ public partial class Mapa : ContentPage
                 break;
         }
     }
+    Pin boardwalkPin;
+    Pin wharfPin;
 
     void AgregarPin(object sender, EventArgs e)
     {
@@ -35,26 +37,32 @@ public partial class Mapa : ContentPage
         double longitud = Double.Parse(Longitude.Text);
         
 
-        Pin boardwalkPin = new Pin
+        boardwalkPin = new Pin
         {
             Location = new Location(latitud, longitud),
-            Label = "",
-            Address = "",
+            Label = Label.Text,
+            Address = Address.Text,
             Type = PinType.Place
         };
         boardwalkPin.MarkerClicked += OnMarkerClickedAsync;
 
-        Pin wharfPin = new Pin
+        wharfPin = new Pin
         {
-            Location = new Location(36.9571571, -122.0173544),
-            Label = "Wharf",
-            Address = "Santa Cruz",
+            Location = new Location(latitud, longitud),
+            Label = Label.Text,
+            Address = Address.Text,
             Type = PinType.Place
         };
         wharfPin.InfoWindowClicked += OnInfoWindowClickedAsync;
 
         map.Pins.Add(boardwalkPin);
         map.Pins.Add(wharfPin);
+    }
+
+    void EliminarPin(object sender, EventArgs e)
+    {
+        map.Pins.Remove(boardwalkPin);
+        map.Pins.Remove(wharfPin);
     }
 
     async void OnMarkerClickedAsync(object sender, PinClickedEventArgs e)

@@ -57,7 +57,15 @@
                 Placeholder="Ingrese la longitud"
                 />
         </StackLayout>
+        <Entry x:Name="Label"
+                Placeholder="Ingrese la latitud" 
+                />
+        <Entry x:Name="Address"
+                Placeholder="Ingrese la longitud"
+                />
         <Button Text="Agregar pin"
                 Clicked="AgregarPin" />
+        <Button Text="Eliminar pin"
+                Clicked="EliminarPin" />
     </StackLayout>
 </ContentPage>
